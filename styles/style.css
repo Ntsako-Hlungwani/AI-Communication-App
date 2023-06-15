@@ -1,0 +1,209 @@
+:root {
+    --body-bg: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    --msger-bg: #fff;
+    --border: 2px solid #ddd;
+    --left-msg-bg: #ececec;
+    --right-msg-bg: #579ffb;
+  }
+  html {
+    box-sizing: border-box;
+  }
+  *,
+  *:before,
+  *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+  }
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: var(--body-bg);
+    font-family: Helvetica, sans-serif;
+  }
+
+.msger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    width: 100%;
+    max-width: 500px;
+    background: #fff;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .msger-header {
+    padding: 20px;
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+  }
+  .msger-header-title {
+    margin: 0;
+    font-size: 18px;
+  }
+  .msger-chat {
+    flex: 1;
+    padding: 20px 20px 0 20px;
+    overflow-y: auto;
+    background: #fff;
+
+  }
+  .msg {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+  }
+  .msg:last-of-type {
+    margin-bottom: 0;
+  }
+  .msg-img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 50%;
+    background: #ddd;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .msg-bubble {
+    max-width: 80%;
+    padding: 15px;
+    border-radius: 15px;
+    background: #ddd;
+    font-size: 15px;
+    line-height: 1.5;
+    position: relative;
+  }
+  .msg-bubble:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 0;
+    left: -20px;
+    border: 10px solid;
+    border-color: transparent #ddd transparent transparent;
+  }
+  .msg-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  .msg-info-name {
+    margin-right: 10px;
+    font-weight: 700;
+  }
+  .msg-info-time {
+    font-size: 12px;
+    color: #aaa;
+  }
+  .msg-text {
+    margin: 0;
+  }
+  .msger-inputarea {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background: #fff;
+    border-top: 1px solid #ddd;
+  }
+  .msger-input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    font-size: 15px;
+  }
+  .msger-send-btn {
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    background: #ddd;
+    font-size: 15px;
+    cursor: pointer;
+  }
+  .msger-send-btn:hover {
+    background: #dcf8c6;
+  }
+  .right-msg .msg-bubble {
+    background: #dcf8c6;
+  }
+  .right-msg .msg-bubble:after {
+    border-color: transparent #dcf8c6 transparent transparent;
+    left: inherit;
+    right: -20px;
+  }
+    .msger-chat {
+    padding: 20px 20px 0 20px;
+    overflow-y: auto;
+    background: #fff;
+    }
+
+    .msger-chat::-webkit-scrollbar {
+    width: 10px;
+    }
+    .msger-chat::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    }
+    .msger-chat::-webkit-scrollbar-thumb {
+    background: #888;
+    }
+    .msger-chat::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    }
+    .msger-chat::-webkit-scrollbar-thumb:active {
+    background: #555;
+    }
+    .msger-chat::-webkit-scrollbar-thumb:horizontal {
+    height: 10px;
+    }
+    .msger-chat::-webkit-scrollbar-thumb:vertical {
+    width: 10px;
+    }
+    .msger-chat::-webkit-scrollbar-thumb:horizontal:active {
+    background: #555;
+    }
+    .msger-chat::-webkit-scrollbar-thumb:vertical:active {
+    background: #555;
+    }
+    .msger-chat::-webkit-scrollbar-thumb:horizontal:hover {
+    background: #555;
+    }
+    .msger-chat::-webkit-scrollbar-thumb:vertical:hover {
+    background: #555;
+    }
+    .msger-chat::-webkit-scrollbar-thumb:horizontal:decrement {
+    background: #555;
+    }
+    .msger-chat::-webkit-scrollbar-thumb:vertical:decrement {
+    background: #555;
+    }
+    .msger-chat::-webkit-scrollbar-thumb:horizontal:increment {
+    background: #555;
+    }
+    .msger-chat::-webkit-scrollbar-thumb:vertical:increment {
+    background: #555;
+    }
+    .msger-chat::-webkit-scrollbar-thumb:horizontal:decrement:active {
+    background: #555;
+    }
+    .msger-chat::-webkit-scrollbar-thumb:vertical:decrement:active {
+    background: #555;
+    }
+    .msger-chat::-webkit-scrollbar-thumb:horizontal:increment:active {
+    background: #555;
+    }
+
+  @media (max-width: 568px) {
+    .msger {
+      max-width: 100%;
+      height: 100%;
+      border-radius: 0;
+    }
+  }

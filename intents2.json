@@ -1,0 +1,9 @@
+{"intents2": [
+    {"tag": "greeting",
+     "patterns": ["Test"],
+     "responses": ["Hlawuleko........."],
+     "context": [""]
+    }
+
+]
+}
